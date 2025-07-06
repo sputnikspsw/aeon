@@ -16,8 +16,14 @@ export const metadata: Metadata = {
   title: "Aeon Summer",
   description: "Sputnikspsw",
   icons: {
-    icon: '/spx6900.png',
-    apple: '/spx6900.png',
+    icon: [
+      { url: '/spx6900.png', sizes: '32x32' },
+      { url: '/spx6900.png', sizes: '16x16' },
+    ],
+    apple: [
+      { url: '/spx6900.png', sizes: '180x180' },
+    ],
+    shortcut: '/spx6900.png',
   },
 };
 
