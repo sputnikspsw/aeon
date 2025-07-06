@@ -430,7 +430,7 @@ export default function TicketPage() {
                     name="passType"
                     value={form.passType}
                     onChange={handleChange}
-                    placeholder="e.g. ALL DAY PASS"
+                    placeholder="e.g. Cognisphere"
                   />
                 </div>
 
