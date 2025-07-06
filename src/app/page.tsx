@@ -26,11 +26,21 @@ function isValidAeonNumber(num: number) {
   return num >= AEON_MIN && num <= AEON_MAX;
 }
 
-function encodeTicketData(data: any) {
+interface TicketData {
+  wallet: string;
+  name: string;
+  event: string;
+  aeon: number;
+  theme: string;
+  date: string;
+  passType: string;
+}
+
+function encodeTicketData(data: TicketData) {
   return encodeURIComponent(btoa(JSON.stringify(data)));
 }
 
-function decodeTicketData(str: string) {
+function decodeTicketData(str: string): TicketData | null {
   try {
     return JSON.parse(atob(decodeURIComponent(str)));
   } catch {
