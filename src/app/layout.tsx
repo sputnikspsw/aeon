@@ -15,16 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Aeon Summer",
   description: "Sputnikspsw",
-  icons: {
-    icon: [
-      { url: '/spx6900.png', sizes: '32x32' },
-      { url: '/spx6900.png', sizes: '16x16' },
-    ],
-    apple: [
-      { url: '/spx6900.png', sizes: '180x180' },
-    ],
-    shortcut: '/spx6900.png',
-  },
+ 
 };
 
 export default function RootLayout({

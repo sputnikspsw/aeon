@@ -171,6 +171,19 @@ export default function TicketPage() {
     return null
   }
 
+  // Add centered SPX SVG logo
+  const SpxLogo = () => (
+    <div className="flex justify-center w-full mb-4" style={{marginTop:'-80px'}}>
+      <Image
+        src="/spx6900.svg"
+        alt="SPX Logo"
+        width={350}
+        height={1}
+        priority
+      />
+    </div>
+  );
+
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
     const { name, value } = e.target;
     setForm((f) => {
@@ -372,7 +385,8 @@ export default function TicketPage() {
       {!isLoading && (
         showForm ? (
           <div className="flex flex-col gap-8 w-full max-w-4xl">
-            <form className="flex-1 space-y-6 bg-white/10 backdrop-blur-xl p-8 rounded-2xl shadow-2xl border border-white/20 mb-8" onSubmit={e => e.preventDefault()}>
+            <SpxLogo />
+            <form className="flex-1 space-y-6 bg-white/10 backdrop-blur-xl p-8 rounded-2xl shadow-2xl border border-white/20 mb-8" style={{marginTop:'-95px'}} onSubmit={e => e.preventDefault()}>
               
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
